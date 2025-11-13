@@ -7,11 +7,33 @@ int main() {
 
 
     //tabuleiro inicial com 0s
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 10; i++) { 
         for (int j = 0; j < 10; j++) {
             tabuleiro[i][j] = 0;
         }
     }
+
+
+    //POSICIONAMENTO DOS NAVIOS (Navio 1) 3 posiçoes na horizontal
+    //Começa na Linha 'B', coluna 1
+    int navio1_linha_inicio = 1; 
+    int navio1_coluna_inicio = 3; 
+
+
+    for (int k = 0; k < 3; k++) { //3 posições lado a lado com o número 3
+        tabuleiro[navio1_linha_inicio][navio1_coluna_inicio + k] = 3;
+    }
+    
+    // Navio 2: 3 posiçoes na vertical
+    //Começa na Linha 'E', coluna 7
+    int navio2_linha_inicio = 4; 
+    int navio2_coluna_inicio = 7; 
+
+
+    for (int k = 0; k < 3; k++) {//3 posições uma embaixo da outra com o número 3
+        tabuleiro[navio2_linha_inicio + k][navio2_coluna_inicio] = 3;
+    }
+
 
 
     //imprime a coluna (0 a 9)
